@@ -128,3 +128,22 @@ export const useAuth = () => {
     signOut,
   };
 };
+
+// Standalone function to check admin status
+export const checkAdminStatus = async (): Promise<boolean> => {
+  try {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) return false;
+
+    const { data, error } = await supabase
+      .from('user_roles')
+      .select('role')
+      .eq('user_id', user.id)
+      .eq('role', 'admin')
+      .single();
+
+    return !error && !!data;
+  } catch (error) {
+    return false;
+  }
+};
