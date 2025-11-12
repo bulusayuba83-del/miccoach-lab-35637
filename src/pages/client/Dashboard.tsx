@@ -5,14 +5,21 @@ import { supabase } from '@/integrations/supabase/client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowDownCircle, ArrowUpCircle, TrendingUp, Wallet, LogOut, DollarSign } from 'lucide-react';
+import { ArrowDownCircle, ArrowUpCircle, TrendingUp, Wallet, LogOut, DollarSign, BarChart3 } from 'lucide-react';
+import { ProfitHistoryChart } from '@/components/charts/ProfitHistoryChart';
+import { PortfolioDistributionChart } from '@/components/charts/PortfolioDistributionChart';
+import { DailyReturnsChart } from '@/components/charts/DailyReturnsChart';
+import { PerformanceMetricsChart } from '@/components/charts/PerformanceMetricsChart';
+import type { DailyProfit, Subscription, Transaction } from '@/utils/chartDataProcessing';
 
 const ClientDashboard = () => {
   const { user, signOut, loading: authLoading } = useAuth();
   const navigate = useNavigate();
   const [profile, setProfile] = useState<any>(null);
-  const [subscriptions, setSubscriptions] = useState<any[]>([]);
-  const [recentTransactions, setRecentTransactions] = useState<any[]>([]);
+  const [subscriptions, setSubscriptions] = useState<Subscription[]>([]);
+  const [recentTransactions, setRecentTransactions] = useState<Transaction[]>([]);
+  const [dailyProfits, setDailyProfits] = useState<DailyProfit[]>([]);
+  const [allTransactions, setAllTransactions] = useState<Transaction[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -55,6 +62,24 @@ const ClientDashboard = () => {
         .limit(5);
 
       setRecentTransactions(transData || []);
+
+      // Fetch all transactions for charts
+      const { data: allTransData } = await supabase
+        .from('transactions')
+        .select('*')
+        .eq('user_id', user.id)
+        .order('created_at', { ascending: false });
+
+      setAllTransactions(allTransData || []);
+
+      // Fetch daily profits for charts
+      const { data: profitsData } = await supabase
+        .from('daily_profits')
+        .select('*')
+        .eq('user_id', user.id)
+        .order('date', { ascending: true });
+
+      setDailyProfits(profitsData || []);
     } catch (error) {
       console.error('Error fetching dashboard data:', error);
     } finally {
@@ -171,6 +196,51 @@ const ClientDashboard = () => {
           </Button>
         </div>
 
+        {/* Profit History Chart - Full Width */}
+        <Card className="border-primary/30 shadow-[0_0_30px_rgba(139,195,74,0.15)] animate-fade-in">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <TrendingUp className="h-5 w-5 text-primary" />
+              Profit Growth Over Time
+            </CardTitle>
+            <CardDescription>Your cumulative profit journey</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ProfitHistoryChart profits={dailyProfits} days={30} />
+          </CardContent>
+        </Card>
+
+        {/* Charts Grid - 2 Columns */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Portfolio Distribution */}
+          <Card className="border-secondary/30 shadow-[0_0_20px_rgba(77,182,172,0.15)] animate-fade-in">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <BarChart3 className="h-5 w-5 text-secondary" />
+                Investment Distribution
+              </CardTitle>
+              <CardDescription>Your portfolio breakdown by plan</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <PortfolioDistributionChart subscriptions={subscriptions} />
+            </CardContent>
+          </Card>
+
+          {/* Daily Returns */}
+          <Card className="border-success/30 shadow-[0_0_20px_rgba(139,195,74,0.15)] animate-fade-in">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <DollarSign className="h-5 w-5 text-success" />
+                Recent Daily Returns
+              </CardTitle>
+              <CardDescription>Last 7 days profit performance</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <DailyReturnsChart profits={dailyProfits} days={7} />
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Active Subscriptions */}
         <Card>
           <CardHeader>
@@ -202,6 +272,20 @@ const ClientDashboard = () => {
                 No active trading plans. Start investing today!
               </div>
             )}
+          </CardContent>
+        </Card>
+
+        {/* Performance Metrics Chart - Full Width */}
+        <Card className="border-primary/30 shadow-[0_0_30px_rgba(139,195,74,0.15)] animate-fade-in">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <BarChart3 className="h-5 w-5 text-primary" />
+              Performance Overview
+            </CardTitle>
+            <CardDescription>Track your deposits, investments, and profits</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <PerformanceMetricsChart transactions={allTransactions} profits={dailyProfits} />
           </CardContent>
         </Card>
 
