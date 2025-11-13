@@ -48,7 +48,7 @@ const Auth = () => {
           <div className="flex items-center justify-center gap-2 mb-4">
             <TrendingUp className="h-12 w-12 text-primary" />
             <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              TCM Financial
+              Prime Capital Investment
             </h1>
           </div>
           <p className="text-muted-foreground">Automated Bitcoin Trading Platform</p>

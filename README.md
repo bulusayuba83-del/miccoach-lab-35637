@@ -1,4 +1,6 @@
-# Welcome to your Lovable project
+# Prime Capital Investment
+
+Professional automated Bitcoin trading platform with AI-powered trading robots delivering consistent returns.
 
 ## Project info
 

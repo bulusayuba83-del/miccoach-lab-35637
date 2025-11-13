@@ -1,5 +1,5 @@
 {
-  "app_title": "O2 Coaching",
+  "app_title": "Prime Capital Investment",
   "app_subtitle_cycling": "Power Duration Analyzer",
   "app_subtitle_running": "Speed Duration Analyzer",
   "nav_cycling": "Cycling",
@@ -658,10 +658,10 @@
     "note_text": "Critical Speed (CS) and other threshold values are estimates derived from mathematical models and are subject to statistical and physiological error margins. They represent the best estimate of a 'transition zone' rather than an absolute value."
   },
   "footer": {
-    "brand": "O2 Coaching",
-    "copyright": "© 2024 - Michael Pesse. All rights reserved.",
-    "tagline": "Science at the service of your passion.",
-    "support_button": "☕ Support O2 Coaching",
-    "support_description": "Your support helps cover hosting and development costs."
+    "brand": "Prime Capital Investment",
+    "copyright": "© 2025 Prime Capital Investment. All rights reserved.",
+    "tagline": "Your trusted partner in automated Bitcoin trading",
+    "support_button": "Contact Support",
+    "support_description": "Professional trading solutions with 24/7 support"
   }
 }
