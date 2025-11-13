@@ -16,17 +16,9 @@ const BrandingFooter = () => {
             <p className="text-xs text-slate-400">{t('footer.copyright')}</p>
           </div>
           
-          {/* Sezione Centrale: Tagline e Supporto */}
+          {/* Sezione Centrale: Tagline */}
           <div className="text-center flex flex-col items-center gap-3">
             <p className="text-slate-300 italic">{t('footer.tagline')}</p>
-            <a 
-              href="https://buymeacoffee.com/michaelpesse" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 border border-lime-400 rounded text-lime-400 hover:bg-lime-400 hover:text-slate-900 transition-colors text-sm font-medium"
-            >
-              {t('footer.support_button')}
-            </a>
             <p className="text-xs text-slate-400 max-w-xs">
               {t('footer.support_description')}
             </p>
@@ -35,19 +27,14 @@ const BrandingFooter = () => {
           {/* Sezione Destra: Contatti */}
           <div className="text-right">
             <a 
-              href="mailto:info@miccoach.it" 
+              href="mailto:support@primecapitalinvestment.com" 
               className="text-slate-400 hover:text-lime-400 transition-colors text-sm block mb-1"
             >
-              info@miccoach.it
+              support@primecapitalinvestment.com
             </a>
-            <a 
-              href="https://www.o2coaching.it" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-slate-400 hover:text-lime-400 transition-colors text-sm block"
-            >
-              www.o2coaching.it
-            </a>
+            <p className="text-slate-400 text-sm">
+              24/7 Support Available
+            </p>
           </div>
           
         </div>

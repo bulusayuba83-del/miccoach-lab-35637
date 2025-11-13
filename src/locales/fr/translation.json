@@ -1,5 +1,5 @@
 {
-  "app_title": "O2 Coaching",
+  "app_title": "Prime Capital Investment",
   "app_subtitle_cycling": "Analyseur Durée-Puissance",
   "app_subtitle_running": "Analyseur Durée-Vitesse",
   "nav_cycling": "Cyclisme",
@@ -658,10 +658,10 @@
     "note_text": "Les valeurs de Vitesse Critique (CS) et autres seuils sont des estimations dérivées de modèles mathématiques et sont sujettes à une marge d'erreur statistique et physiologique. Elles représentent la meilleure estimation d'une 'zone de transition' plutôt qu'une valeur absolue."
   },
   "footer": {
-    "brand": "O2 Coaching",
-    "copyright": "© 2024 - Michael Pesse. Tous droits réservés.",
-    "tagline": "La science au service de votre passion.",
-    "support_button": "☕ Soutenez O2 Coaching",
-    "support_description": "Votre soutien aide à couvrir les coûts d'hébergement et de développement."
+    "brand": "Prime Capital Investment",
+    "copyright": "© 2025 Prime Capital Investment. Tous droits réservés.",
+    "tagline": "Votre partenaire de confiance dans le trading automatique de Bitcoin",
+    "support_button": "Contacter le Support",
+    "support_description": "Solutions de trading professionnelles avec support 24/7"
   }
 }

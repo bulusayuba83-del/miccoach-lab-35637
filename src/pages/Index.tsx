@@ -58,7 +58,7 @@ const Index = () => {
             <div className="flex items-center justify-center gap-3 mb-6">
               <TrendingUp className="h-16 w-16 text-primary" />
               <h1 className="text-6xl font-bold bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                TCM Financial Services
+                Prime Capital Investment
               </h1>
             </div>
             
@@ -107,7 +107,7 @@ const Index = () => {
       {/* Features */}
       <section className="py-20 border-b border-border/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Why Choose TCM Financial?</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Why Choose Prime Capital Investment?</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center space-y-4 p-6 rounded-lg bg-card/50 border border-primary/20">
               <div className="w-16 h-16 mx-auto rounded-full bg-primary/20 flex items-center justify-center">
@@ -171,7 +171,7 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Start Trading?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of investors who trust TCM Financial for their Bitcoin trading needs
+            Join thousands of investors who trust Prime Capital Investment for their Bitcoin trading needs
           </p>
           {!user && (
             <Button
@@ -188,7 +188,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t border-border/50 py-8">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>&copy; 2025 TCM Financial Services. All rights reserved.</p>
+          <p>&copy; 2025 Prime Capital Investment. All rights reserved.</p>
         </div>
       </footer>
     </div>

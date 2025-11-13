@@ -1,5 +1,5 @@
 {
-  "app_title": "O2 Coaching",
+  "app_title": "Prime Capital Investment",
   "app_subtitle_cycling": "Power Duration Analyzer",
   "app_subtitle_running": "Speed Duration Analyzer",
   "nav_cycling": "Ciclismo",
@@ -584,10 +584,10 @@
     }
   },
   "footer": {
-    "brand": "O2 Coaching",
-    "copyright": "© 2024 - Michael Pesse. Tutti i diritti riservati.",
-    "tagline": "La scienza al servizio della tua passione.",
-    "support_button": "☕ Supporta O2 Coaching",
-    "support_description": "Il tuo supporto aiuta a coprire i costi di hosting e sviluppo."
+    "brand": "Prime Capital Investment",
+    "copyright": "© 2025 Prime Capital Investment. Tutti i diritti riservati.",
+    "tagline": "Il tuo partner di fiducia nel trading automatico di Bitcoin",
+    "support_button": "Contatta Supporto",
+    "support_description": "Soluzioni di trading professionale con supporto 24/7"
   }
 }
