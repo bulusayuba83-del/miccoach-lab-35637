@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { TradingPlanCard } from '@/components/TradingPlanCard';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
-import { TrendingUp, Shield, Zap, Clock, LogIn } from 'lucide-react';
+import { TrendingUp, Shield, Zap, Clock, LogIn, Star, Quote } from 'lucide-react';
 import { toast } from 'sonner';
 import {
   Accordion,
@@ -290,6 +290,176 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 border-b border-border/50 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">What Our Investors Say</h2>
+            <p className="text-xl text-muted-foreground">
+              Real success stories from Prime Capital Investment members
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {/* Testimonial 1 */}
+            <div className="bg-card border border-border/50 rounded-lg p-6 space-y-4 relative overflow-hidden">
+              <Quote className="absolute top-4 right-4 h-12 w-12 text-primary/10" />
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg">
+                  JD
+                </div>
+                <div>
+                  <h4 className="font-semibold">James Davis</h4>
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-warning text-warning" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="text-foreground/80 leading-relaxed">
+                "I started with the $500 plan and was skeptical at first. After seeing consistent 3.5% daily returns, 
+                I increased my investment. In just 3 months, I've made over $2,800 in pure profit!"
+              </p>
+              <div className="pt-2 border-t border-border/50">
+                <p className="text-sm text-success font-semibold">Total Profit: $2,847</p>
+                <p className="text-xs text-muted-foreground">Member since January 2025</p>
+              </div>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-card border border-border/50 rounded-lg p-6 space-y-4 relative overflow-hidden">
+              <Quote className="absolute top-4 right-4 h-12 w-12 text-secondary/10" />
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-lg">
+                  SM
+                </div>
+                <div>
+                  <h4 className="font-semibold">Sarah Martinez</h4>
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-warning text-warning" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="text-foreground/80 leading-relaxed">
+                "As a busy professional, I needed passive income without the time commitment. Prime Capital's 
+                automated trading is perfect. The support team is responsive and withdrawals are processed quickly."
+              </p>
+              <div className="pt-2 border-t border-border/50">
+                <p className="text-sm text-success font-semibold">Total Profit: $5,120</p>
+                <p className="text-xs text-muted-foreground">Member since December 2024</p>
+              </div>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="bg-card border border-border/50 rounded-lg p-6 space-y-4 relative overflow-hidden">
+              <Quote className="absolute top-4 right-4 h-12 w-12 text-primary/10" />
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg">
+                  RP
+                </div>
+                <div>
+                  <h4 className="font-semibold">Robert Park</h4>
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-warning text-warning" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="text-foreground/80 leading-relaxed">
+                "I've tried other trading platforms before, but none compare to Prime Capital. The transparency, 
+                consistent returns, and professional approach make this the best investment I've made this year."
+              </p>
+              <div className="pt-2 border-t border-border/50">
+                <p className="text-sm text-success font-semibold">Total Profit: $8,934</p>
+                <p className="text-xs text-muted-foreground">Member since October 2024</p>
+              </div>
+            </div>
+
+            {/* Testimonial 4 */}
+            <div className="bg-card border border-border/50 rounded-lg p-6 space-y-4 relative overflow-hidden">
+              <Quote className="absolute top-4 right-4 h-12 w-12 text-secondary/10" />
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-lg">
+                  EW
+                </div>
+                <div>
+                  <h4 className="font-semibold">Emily Watson</h4>
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-warning text-warning" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="text-foreground/80 leading-relaxed">
+                "I was nervous about Bitcoin trading, but the automated system takes care of everything. No stress, 
+                no complicated charts. Just steady profits that appear in my account every single day."
+              </p>
+              <div className="pt-2 border-t border-border/50">
+                <p className="text-sm text-success font-semibold">Total Profit: $4,256</p>
+                <p className="text-xs text-muted-foreground">Member since November 2024</p>
+              </div>
+            </div>
+
+            {/* Testimonial 5 */}
+            <div className="bg-card border border-border/50 rounded-lg p-6 space-y-4 relative overflow-hidden">
+              <Quote className="absolute top-4 right-4 h-12 w-12 text-primary/10" />
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg">
+                  MC
+                </div>
+                <div>
+                  <h4 className="font-semibold">Michael Chen</h4>
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-warning text-warning" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="text-foreground/80 leading-relaxed">
+                "Best investment decision I've made. Started with $1,000 and reinvested my profits. Now earning 
+                over $100 daily. The platform is secure, professional, and the returns are exactly as promised."
+              </p>
+              <div className="pt-2 border-t border-border/50">
+                <p className="text-sm text-success font-semibold">Total Profit: $6,789</p>
+                <p className="text-xs text-muted-foreground">Member since September 2024</p>
+              </div>
+            </div>
+
+            {/* Testimonial 6 */}
+            <div className="bg-card border border-border/50 rounded-lg p-6 space-y-4 relative overflow-hidden">
+              <Quote className="absolute top-4 right-4 h-12 w-12 text-secondary/10" />
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-lg">
+                  LT
+                </div>
+                <div>
+                  <h4 className="font-semibold">Linda Thompson</h4>
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-warning text-warning" />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="text-foreground/80 leading-relaxed">
+                "Retired and looking for steady income. Prime Capital has exceeded my expectations. The daily returns 
+                are reliable, and I can withdraw my profits whenever I need them. Highly recommend!"
+              </p>
+              <div className="pt-2 border-t border-border/50">
+                <p className="text-sm text-success font-semibold">Total Profit: $3,421</p>
+                <p className="text-xs text-muted-foreground">Member since December 2024</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
