@@ -144,6 +144,49 @@ const Index = () => {
         </div>
       </section>
 
+      {/* About Us */}
+      <section className="py-20 border-b border-border/50 bg-gradient-to-br from-secondary/5 to-primary/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-4xl font-bold">About Prime Capital Investment</h2>
+              <p className="text-xl text-muted-foreground">
+                Leading the Future of Automated Cryptocurrency Trading
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-4 p-8 rounded-lg bg-card border border-border/50">
+                <h3 className="text-2xl font-semibold text-primary">Our Mission</h3>
+                <p className="text-foreground/80 leading-relaxed">
+                  At Prime Capital Investment, we democratize access to sophisticated cryptocurrency trading strategies. 
+                  Our mission is to empower investors of all levels to participate in the Bitcoin market with confidence, 
+                  leveraging cutting-edge technology that was once available only to institutional traders.
+                </p>
+                <p className="text-foreground/80 leading-relaxed">
+                  We believe in transparency, security, and consistent performance. Every trading decision is backed by 
+                  data-driven algorithms designed to maximize returns while managing risk effectively.
+                </p>
+              </div>
+
+              <div className="space-y-4 p-8 rounded-lg bg-card border border-border/50">
+                <h3 className="text-2xl font-semibold text-secondary">Our Technology</h3>
+                <p className="text-foreground/80 leading-relaxed">
+                  Our proprietary AI-powered trading bots utilize advanced machine learning algorithms to analyze 
+                  market trends, identify profitable opportunities, and execute trades with precision timing. 
+                  Operating 24/7 across multiple exchanges, our systems process millions of data points per second.
+                </p>
+                <p className="text-foreground/80 leading-relaxed">
+                  With real-time market monitoring, automated risk management, and adaptive strategies that evolve 
+                  with market conditions, we deliver consistent returns while protecting your capital through 
+                  sophisticated stop-loss mechanisms and diversification protocols.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Trading Plans */}
       <section className="py-20">
         <div className="container mx-auto px-4">
