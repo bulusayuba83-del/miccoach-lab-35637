@@ -6,6 +6,12 @@ import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { TrendingUp, Shield, Zap, Clock, LogIn } from 'lucide-react';
 import { toast } from 'sonner';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 const Index = () => {
   const [tradingPlans, setTradingPlans] = useState<any[]>([]);
@@ -183,6 +189,107 @@ const Index = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 border-b border-border/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-xl text-muted-foreground">
+                Everything you need to know about Prime Capital Investment
+              </p>
+            </div>
+
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="item-1" className="border border-border/50 rounded-lg px-6 bg-card">
+                <AccordionTrigger className="text-lg font-semibold hover:text-primary">
+                  How does automated Bitcoin trading work?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 leading-relaxed">
+                  Our AI-powered trading bots analyze market data 24/7, identifying profitable trading opportunities 
+                  in real-time. The bots execute trades automatically based on advanced algorithms that consider 
+                  market trends, volatility, and risk factors. You don't need any trading experience - our technology 
+                  handles everything while you watch your investment grow.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="border border-border/50 rounded-lg px-6 bg-card">
+                <AccordionTrigger className="text-lg font-semibold hover:text-primary">
+                  What investment plans are available?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 leading-relaxed">
+                  We offer multiple investment plans ranging from $100 to $5,000, each with different daily return 
+                  percentages (1.5% to 5.5%). Plans typically run for 30 days, and you can choose the one that best 
+                  fits your investment goals and risk tolerance. Higher investment amounts generally yield higher 
+                  daily returns. All plans include 24/7 automated trading and full customer support.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="border border-border/50 rounded-lg px-6 bg-card">
+                <AccordionTrigger className="text-lg font-semibold hover:text-primary">
+                  How do withdrawals work?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 leading-relaxed">
+                  You can request a withdrawal at any time from your dashboard. Withdrawal requests are processed 
+                  by our team within 24-48 hours. Your profits and principal can be withdrawn to your preferred 
+                  payment method. We support various withdrawal methods including bank transfers and cryptocurrency 
+                  wallets. There are no hidden fees - you receive exactly what you request to withdraw.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="border border-border/50 rounded-lg px-6 bg-card">
+                <AccordionTrigger className="text-lg font-semibold hover:text-primary">
+                  Is my investment secure?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 leading-relaxed">
+                  Yes. We employ bank-level security measures including SSL encryption, secure servers, and 
+                  two-factor authentication. Your funds are stored in segregated accounts and never mixed with 
+                  operational funds. Our trading algorithms include risk management protocols and stop-loss 
+                  mechanisms to protect your capital. We are committed to maintaining the highest security 
+                  standards in the industry.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="border border-border/50 rounded-lg px-6 bg-card">
+                <AccordionTrigger className="text-lg font-semibold hover:text-primary">
+                  Do I need trading experience?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 leading-relaxed">
+                  No trading experience is required. Our automated system handles all trading decisions and 
+                  executions for you. Simply choose your investment plan, make a deposit, and our AI-powered 
+                  bots will do the rest. You can monitor your profits in real-time through your dashboard 
+                  without needing to understand complex trading strategies or market analysis.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="border border-border/50 rounded-lg px-6 bg-card">
+                <AccordionTrigger className="text-lg font-semibold hover:text-primary">
+                  What are the daily returns I can expect?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 leading-relaxed">
+                  Daily returns vary by plan and range from 1.5% to 5.5% per day, depending on your investment 
+                  amount. Returns are credited to your account daily and compound over the duration of your plan. 
+                  While we strive for consistency, returns may vary slightly based on market conditions. Your 
+                  dashboard provides real-time tracking of all profits and performance metrics.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-7" className="border border-border/50 rounded-lg px-6 bg-card">
+                <AccordionTrigger className="text-lg font-semibold hover:text-primary">
+                  How do I get started?
+                </AccordionTrigger>
+                <AccordionContent className="text-foreground/80 leading-relaxed">
+                  Getting started is simple: 1) Create your free account by clicking "Get Started" above, 
+                  2) Choose your preferred investment plan, 3) Make your initial deposit using your preferred 
+                  payment method, and 4) Watch your investment grow as our bots trade automatically. Our support 
+                  team is available 24/7 to assist you with any questions during the setup process.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
